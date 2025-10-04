@@ -1,0 +1,11 @@
+engineStrict: true
+
+onlyBuiltDependencies:
+  - simple-git-hooks
+  - unrs-resolver
+
+packageManagerStrictVersion: true
+
+savePrefix: ''
+
+strictPeerDependencies: true

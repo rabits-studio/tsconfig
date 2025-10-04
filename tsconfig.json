@@ -1,0 +1,10 @@
+{
+  "extends": ["./configs/base", "./configs/strict"],
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
