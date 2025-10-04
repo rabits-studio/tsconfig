@@ -1,0 +1,2 @@
+# tsconfig
+Rabits' base TSConfig
