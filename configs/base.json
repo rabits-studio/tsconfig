@@ -1,20 +1,45 @@
 {
+  // Last Update: Typescript v5.9
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "incremental": true,
-    "isolatedModules": true,
-    "moduleDetection": "force",
-    "noEmitOnError": true,
-    "pretty": true,
+    // Type Checking:
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+
+    // Modules:
+    "allowArbitraryExtensions": true,
+    "noUncheckedSideEffectImports": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
+
+    // Emit:
     "stripInternal": true,
+
+    // JavaScript Support:
+    "allowJs": true,
+    "checkJs": true,
+
+    // Interop Constraints:
     "verbatimModuleSyntax": true,
 
-    "noEmit": true,
-    "allowImportingTsExtensions": true
+    // Language and Environment: [incomplete]
+    "moduleDetection": "force",
+
+    // Projects: [incomplete]
+    "incremental": true,
+
+    // Output Formatting: [incomplete]
+    "pretty": true,
+
+    // Completeness:
+    "skipLibCheck": true
   }
 }

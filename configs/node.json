@@ -1,0 +1,9 @@
+{
+  // Last Update: Typescript v5.9
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["./base"],
+  "compilerOptions": {
+    // Modules:
+    "module": "nodenext"
+  }
+}

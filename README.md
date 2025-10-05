@@ -1,50 +1,70 @@
 # Rabits TSConfig
 
-Rabits' base TSConfig
+A collection of [Rabits](https://rabits.dev) TypeScript configuration files designed to enforce the strictest possible type checking.
 
-## Framework Guides:
+## Installation
 
-### Hono
+```sh
+pnpm add -D -E @rabits/tsconfig typescript
+```
+
+## Usage
+
+`tsconfig.json`:
 
 ```json
 {
-  "extends": ["./configs/base.json", "./configs/strict.json"],
+  "extends": ["@rabits/tsconfig/<preset>"],
   "compilerOptions": {
-    // TSX
-    "lib": ["ES2024"],
-    "module": "preserve",
-
-    // Hono
-    "jsx": "react-jsx",
-    "jsxImportSource": "hono/jsx",
-
-    "paths": {
-      "@/*": ["./*"]
-    }
-  },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+    // Your own configurations.
+  }
 }
 ```
+
+### Available Presets
+
+| Preset | Usage                                 |
+| ------ | ------------------------------------- |
+| base   | Base config shared across all presets |
+| react  | React app (vite / nextjs)             |
+| node   | Node.js app (node / ts-node)          |
+| tsx    | Node.js app (tsx)                     |
+
+## Recommendations
 
 ### Next.js
 
 ```json
 {
-  "extends": ["./configs/base.json", "./configs/strict.json"],
+  "extends": ["@rabits/tsconfig/react"],
   "compilerOptions": {
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "strict": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "jsx": "preserve",
+    "target": "ES2017",
     "plugins": [{ "name": "next" }],
-
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "paths": { "@/*": ["./*"] }
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
 ```
+
+### Hono + TSX
+
+```json
+{
+  "extends": ["@rabits/tsconfig/tsx"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "hono/jsx"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}
+```
+
+## Credits
+
+Development of `@rabits/tsconfig` was inspired by the following open-source projects.\
+Sincere thanks to their authors and contributors.
+
+- [`@fullstacksjs/tsconfig`](https://github.com/fullstacksjs/tsconfig) ([Website](https://fullstacksjs.com/en))
+- [`@tsconfig/*`](https://github.com/tsconfig/bases)

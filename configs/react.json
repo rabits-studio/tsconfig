@@ -1,0 +1,21 @@
+{
+  // Last Update: Typescript v5.9
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["./base"],
+  "compilerOptions": {
+    // Modules:
+    "allowImportingTsExtensions": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+
+    // Emit:
+    "noEmit": true,
+
+    // Interop Constraints:
+    "esModuleInterop": true,
+
+    // Language and Environment:
+    "jsx": "preserve",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"]
+  }
+}
