@@ -20,8 +20,6 @@
     "build": "node --experimental-strip-types ./scripts/build.ts",
     "cleanup": "node --experimental-strip-types ./scripts/cleanup.ts",
     "prepare": "simple-git-hooks",
-    "prepublishOnly": "pnpm build",
-    "postpublish": "pnpm cleanup",
     "prepack": "pnpm build",
     "postpack": "pnpm cleanup"
   },
