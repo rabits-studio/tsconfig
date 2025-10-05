@@ -1,7 +1,7 @@
 {
   "name": "@rabits/tsconfig",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "author": "Rabits Studio <admin@rabits.dev>",
   "description": "Rabits' base TSConfig",
@@ -14,7 +14,9 @@
     "url": "git+https://github.com/rabits-studio/tsconfig.git"
   },
   "files": [
-    "*.json"
+    "*.json",
+    "!cspell.json",
+    "!tsconfig.json"
   ],
   "scripts": {
     "build": "node --experimental-strip-types ./scripts/build.ts",
