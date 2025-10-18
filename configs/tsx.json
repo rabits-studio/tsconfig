@@ -12,6 +12,9 @@
     "noEmit": true,
 
     // Interop Constraints:
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    // Language and Environment:
+    "target": "esnext"
   }
 }

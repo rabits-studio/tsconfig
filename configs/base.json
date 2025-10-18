@@ -32,6 +32,7 @@
 
     // Language and Environment: [incomplete]
     "moduleDetection": "force",
+    "target": "es2017",
 
     // Projects: [incomplete]
     "incremental": true,
